@@ -38,9 +38,16 @@ public class AndroidWebViewManager extends ReactWebViewManager {
         return "AndroidWebView";
     }
 
+    protected static class CustomWebViewClient extends ReactWebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            return false;
+        }
+    }
+
     @Override
-    public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        return false;
+    protected void addEventEmitters(ThemedReactContext reactContext, WebView view) {
+        view.setWebViewClient(new CustomWebViewClient());
     }
 
     @Override
