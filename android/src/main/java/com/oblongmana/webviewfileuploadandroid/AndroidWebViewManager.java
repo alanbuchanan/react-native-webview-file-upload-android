@@ -153,6 +153,12 @@ public class AndroidWebViewManager extends ReactWebViewManager {
 
         return view;
     }
+    
+    
+    @Override
+    public boolean shouldOverrideUrlLoading(WebView view, String url) {
+        return false;
+    }
 
     public void setPackage(AndroidWebViewPackage aPackage){
         this.aPackage = aPackage;
