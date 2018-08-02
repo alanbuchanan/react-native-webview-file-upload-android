@@ -27,8 +27,8 @@ import android.os.Build;
 
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.facebook.react.views.webview.ReactWebViewManager;
 import com.oblongmana.webviewfileuploadandroid.AndroidWebViewModule;
+import com.oblongmana.webviewfileuploadandroid.ReactWebViewManager;
 
 public class AndroidWebViewManager extends ReactWebViewManager {
 
@@ -37,7 +37,7 @@ public class AndroidWebViewManager extends ReactWebViewManager {
     public String getName() {
         return "AndroidWebView";
     }
-
+    
     @Override
     protected WebView createViewInstance(ThemedReactContext reactContext) {
         WebView view = super.createViewInstance(reactContext);
