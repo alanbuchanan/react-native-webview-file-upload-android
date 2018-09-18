@@ -69,10 +69,6 @@ public class AndroidWebViewManager extends ReactWebViewManager {
                 return super.onJsAlert(view, url, message, result);
             }
 
-            public boolean onJsConfirm (WebView view, String url, String message, JsResult result){
-                return true;
-            }
-
             public boolean onJsPrompt (WebView view, String url, String message, String defaultValue, JsPromptResult result){
                 return true;
             }
