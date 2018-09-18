@@ -63,6 +63,11 @@ public class AndroidWebViewManager extends ReactWebViewManager {
                 openFileChooserView();
 
             }
+            
+            public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
+                result.confirm();
+                return true;
+            }
 
             public boolean onJsConfirm (WebView view, String url, String message, JsResult result){
                 return true;
