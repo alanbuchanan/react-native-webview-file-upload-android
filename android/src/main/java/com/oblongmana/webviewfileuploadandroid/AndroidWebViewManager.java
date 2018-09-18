@@ -63,15 +63,6 @@ public class AndroidWebViewManager extends ReactWebViewManager {
                 openFileChooserView();
 
             }
-            
-            @Override
-            public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
-                return super.onJsAlert(view, url, message, result);
-            }
-
-            public boolean onJsPrompt (WebView view, String url, String message, String defaultValue, JsPromptResult result){
-                return true;
-            }
 
             // For Android < 3.0
             public void openFileChooser(ValueCallback<Uri> uploadMsg) {
