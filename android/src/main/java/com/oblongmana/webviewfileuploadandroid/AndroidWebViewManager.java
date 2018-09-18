@@ -64,6 +64,7 @@ public class AndroidWebViewManager extends ReactWebViewManager {
 
             }
             
+            @Override
             public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
                 result.confirm();
                 Toast.makeText(module.getActivity().getApplicationContext(), message, Toast.LENGTH_LONG).show();
